@@ -1,0 +1,47 @@
+{
+    "name": "project",
+    "version": "1.0.0",
+    "description": "udacity 2nd project",
+    "main": "index.js",
+    "scripts": {
+        "prettier": "npx prettier --config .prettierrc.json src/**/*.ts --write",
+        "lint": "npx eslint . --ext .ts",
+        "build": "npx tsc",
+        "jasmine": "jasmine",
+        "test": "npm run build && db-migrate up -e test && npm run jasmine && db-migrate -e test reset",
+        "startdev": "nodemon src/index.ts",
+        "start": "nodemon dist/index.js"
+    },
+    "author": "Ahmed Ghoraba",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
+        "@types/db-migrate-base": "^0.0.10",
+        "@types/express": "^4.17.14",
+        "@types/jasmine": "^4.3.0",
+        "@types/jsonwebtoken": "^8.5.9",
+        "@types/pg": "^8.6.5",
+        "@types/supertest": "^2.0.12",
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@typescript-eslint/parser": "^5.40.0",
+        "db-migrate-pg": "^1.2.2",
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jasmine": "^4.4.0",
+        "jasmine-spec-reporter": "^7.0.0",
+        "nodemon": "^2.0.20",
+        "prettier": "^2.7.1",
+        "supertest": "^6.3.0",
+        "typescript": "^4.8.4"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.20.1",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "g": "^2.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "pg": "^8.8.0"
+    }
+}
